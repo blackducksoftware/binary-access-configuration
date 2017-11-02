@@ -13,15 +13,15 @@ This file allows configuration of a set of username/password credentials via eit
 Apply the file via
 
 ```
-apply from: '${url}'
+apply from: 'https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/${version}/artifactory-credentials.gradle'
 ```
 
-Where `${url}` is:
+Where `${version}` is:
 
 - Latest (automatically consumes changes as they are made):
-    - `https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/master/artifactory-credentials.gradle`
+    - `master`
 - Last "curated" release (requires manual file update, but behavior is static unless changed):
-    - `https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/v0.1.0/artifactory-credentials.gradle`
+    - `v0.1.0`
 
 To any block containing a "repositories" element. This commonly includes the `buildscript`, `allprojects`, or `subprojects` block(s)
 
@@ -29,7 +29,7 @@ Note: You may need to use to following pattern for buildscript blocks:
 
 ```
 buildscript { scriptHandler ->
-    apply from: '${url}', to: scriptHandler
+    apply from: https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/master/artifactory-credentials.gradle', to: scriptHandler
 }
 ```
 
