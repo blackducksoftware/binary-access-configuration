@@ -20,8 +20,10 @@ Where `${version}` is:
 
 - Latest (automatically consumes changes as they are made):
     - `master`
+    - Full URL: `https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/master/artifactory-credentials.gradle`
 - Last "curated" release (requires manual file update, but behavior is static unless changed):
     - `v0.1.0`
+    - Full URL: `https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/v0.1.0/artifactory-credentials.gradle`
 
 To any block containing a "repositories" element. This commonly includes the `buildscript`, `allprojects`, or `subprojects` block(s)
 
@@ -29,7 +31,7 @@ Note: You may need to use to following pattern for buildscript blocks:
 
 ```
 buildscript { scriptHandler ->
-    apply from: https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/master/artifactory-credentials.gradle', to: scriptHandler
+    apply from:' https://raw.githubusercontent.com/blackducksoftware/binary-access-configuration/master/artifactory-credentials.gradle', to: scriptHandler
 }
 ```
 
