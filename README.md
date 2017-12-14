@@ -4,6 +4,10 @@ This project contains file(s) for common configuration of access to secured bina
 
 ## Files
 
+### bulk-update.sh
+
+Iterates over files defined (one per line, absolute paths) in `./build-files.txt`, replacing tagged uses of files from this repository. Takes a single argument, the tag to update to
+
 ### artifactory-credentials.gradle
 
 This file allows configuration of a set of username/password credentials via either environment variables or Gradle properties in the user's "Gradle Home" to be applied to a sub-set of the repositories Gradle accesses
